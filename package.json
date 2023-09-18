@@ -1,0 +1,54 @@
+{
+  "name": "excellentng-app",
+  "version": "0.1.0",
+  "homepage": "https://www.excellentng.com/",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "cross-env": "^6.0.3",
+    "font-awesome": "^4.7.0",
+    "popper.js": "^1.16.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-bootstrap": "1.0.0-beta.17",
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.10.0",
+    "react-ionicons": "^3.1.4",
+    "react-meta-tags": "^0.7.4",
+    "react-reveal": "^1.2.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "react-scroll-up": "^1.3.3",
+    "react-slick": "^0.25.2",
+    "react-toastify": "^6.0.0-rc.2-1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build-prd": "cross-env GENERATE_SOURCEMAP=false react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "react-snap": "1.10.0"
+  }
+}

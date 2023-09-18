@@ -1,0 +1,157 @@
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 2rem .5rem 3rem;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 2;
+}
+
+.nav-brand {
+  width: 8rem;
+  margin-right: 15vw;
+}
+
+.nav-list {
+  width: 25rem;
+  height: 100vh;
+  background-color: #ec4125;
+  position: fixed;
+  top: 0;
+  right: -26rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms ease-in-out;
+}
+
+.nav-list.active {
+  right: 0;
+}
+
+.nav-list:hover {
+  right: 0;
+}
+
+.sub-nav {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  padding: .3rem 1rem;
+  width: 25rem;
+  margin-top: 17px;
+  margin-left: -7rem;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.sub-nav a {
+  text-decoration: none;
+}
+
+.sub-nav li {
+  font-size: 14px;
+  padding: .5rem 0;
+  transition: 0.3s ease-in-out;
+}
+
+.sub-nav li:hover {
+  color: #fff;
+  list-style-type: none;
+}
+
+.nested-nav-container:hover .sub-nav {
+  visibility: visible;
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+.nav-item {
+  margin: 2rem 0;
+}
+
+.nav-link {
+  font-size: 2rem;
+  color: rgb(220, 211, 216);
+}
+
+.nav-link:hover{
+  color: rgba(220, 211, 216, 0.7);
+}
+
+@media screen and (min-width: 750px) {
+  nav {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* z-index: 3; */
+  }
+
+  .nav-brand {
+    width: 13rem;
+  }
+
+  .nav-list {
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    position: initial;
+    top: initial;
+    right: initial;
+    flex-direction: row;
+    transition: initial;
+  }
+
+  .menu-icons {
+    display: none;
+  }
+
+  .nav-item {
+    margin: 0 1rem;
+  }
+  
+  .nav-link, .selected {
+    font-size: 2rem;
+    position: relative;
+    font-weight: 700;
+    color: #ec4125;
+  }
+
+  .nav-link:hover {
+    color: rgba(129, 36, 87);
+  }
+
+  .nav-link::before,
+  .selected::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -.1rem;
+    background: #ec4125;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 650ms;
+  }
+
+  .selected::before {
+    transform: scaleX(1);
+  }
+
+  .nav-link:hover::before {
+    transform: scaleX(1);
+  }
+}

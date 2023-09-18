@@ -1,0 +1,32 @@
+
+
+
+@media (min-width: 768px) {
+  .notFound-footer {
+    position: absolute;
+      bottom: 0;
+  }
+}
+
+
+.message {
+  border: 2px #ec4125 solid;
+  border-radius: 5px;
+  font-size: 24px;
+  color: #2c2629;
+  text-align: center;
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .message {
+    margin: 20px;
+  }
+}
+
+
+
+.centerDiv {display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;}

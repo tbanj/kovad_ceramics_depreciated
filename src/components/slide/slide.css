@@ -1,0 +1,105 @@
+.carousel {
+  max-height: 750px;
+  min-height: 300px;
+  width: 100vw;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.caption{
+  top: 25%;
+  text-align: center;
+}
+
+.caption h3{
+  font-size: 4vw;
+  margin-bottom: 1rem;
+} 
+
+.caption p {
+  font-size: 20px;
+  margin-bottom: 1rem;
+} 
+
+.carouselitem {
+  max-height: 750px;
+  min-height: 300px;
+}
+
+.carouselimage {
+  max-height: 750px;
+  min-height: 300px;
+}
+
+.cta-about{
+  margin-top: 3rem;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ec4125;
+  background: #fff;
+  border: 1px solid #fff;
+  padding: 20px 45px;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.cta-about:hover {
+  background: #ec4125;
+  border: 1px solid #ec4125;
+}
+
+.cta-about:hover{
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .caption{
+    top: 25%;
+    text-align: center;
+  }
+
+  .caption h3{
+    font-size: 4vw;
+  }
+  
+  .caption p{
+    font-size: 2.3vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .caption {
+    width: 60%;
+    text-align: start;
+  }
+
+  .caption h3{
+    font-size: 18px;
+    margin-bottom: .5rem;
+  }
+  
+  .caption p{
+    font-size: 10px;
+    margin-bottom: .5rem;
+  }
+
+  .cta-about{
+    margin-top: .5rem;
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: 300;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .caption {
+    top: 20%;
+    width: 60%;
+    text-align: start;
+  }
+
+  
+}

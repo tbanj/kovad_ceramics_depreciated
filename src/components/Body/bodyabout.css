@@ -1,0 +1,246 @@
+.excellent-group-container1 {
+  max-width: 1000px;
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.excellent-group-container2 {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1.8fr;
+  text-align: left;
+}
+
+.excellent-group-text p:nth-child(1),
+.excellent-group-text p:nth-child(3) {
+  font-size: 17px;
+  color: #615252;
+}
+
+.excellent-group-text ul li {
+  font-size: 15px;
+  font-weight: 600;
+  color: #615252;
+}
+
+.vision {
+  background: url('../../assets/vision.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 30rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vision-text-container {
+  width: 60%;
+}
+
+.vision h3 {
+  color: #615252;
+  font-size: 20px;
+}
+
+.vision p {
+  color: #fff;
+  font-size: 17px;
+}
+
+.values-image-container {
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.values-image-container img {
+  width: 100%;
+}
+
+section.directors {
+  width: 100%;
+}
+
+.directors-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px;
+  padding: 0 18vw;
+  justify-items: center;
+}
+
+.director-container h4 {
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+}
+
+.director-container p {
+  font-size: 9px;
+  text-align: center;
+  color: #9A9C9D;
+}
+
+.director-image-container {
+  width: 12rem;
+  height: auto;
+}
+
+.directors-container div:nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.directors-container div:nth-child(2) {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.directors-container div:nth-child(3) {
+  grid-column: 5 / 6;
+  grid-row: 1 / 2;
+}
+
+.directors-container div:nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.directors-container div:nth-child(5) {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+@media screen and (max-width: 1280px) {
+  .directors-container {
+    padding: 0 18vw;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  main.body-about {
+    /* height: 1300px; */
+  }
+
+  .values-image-container {
+    width: 500px;
+  }
+
+  .excellent-group-container1 {
+    max-width: 800px;
+    padding: 0 1rem;
+  }
+
+  .excellent-group-container2 {
+    grid-template-columns: 1fr 1.3fr;
+    gap: 15px;
+  }
+
+  .excellent-group-text p:nth-child(1),
+  .excellent-group-text p:nth-child(3) {
+    font-size: 13px;
+  }
+
+  .excellent-group-text ul li {
+    font-size: 13px;
+  }
+
+  .vision {
+    height: 25rem;
+    width: 100%;
+  }
+
+  .vision h3 {
+    font-size: 17px;
+  }
+
+  .vision p {
+    font-size: 14px;
+  }
+
+  .directors-container {
+    padding: 0 6vw;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .directors-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: dense;
+    gap: 5px;
+    padding: 0 3vw;
+  }
+
+  .directors-container div:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .directors-container div:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .directors-container div:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .directors-container div:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .directors-container div:nth-child(5) {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .excellent-group-container2 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  .excellent-group-image-container {
+    max-width: 170px;
+    margin: 2rem auto;
+  }
+
+  .excellent-group-text {
+    padding: 15px;
+  }
+
+  .excellent-group-text p:nth-child(1),
+  .excellent-group-text p:nth-child(3) {
+    font-size: 13px;
+  }
+
+  .excellent-group-text ul li {
+    font-size: 11px;
+  }
+
+  .vision {
+    height: 17rem;
+    width: 100%;
+  }
+
+  .vision h3 {
+    font-size: 14px;
+  }
+
+  .vision p {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .values-image-container {
+    width: 300px;
+  }
+}
