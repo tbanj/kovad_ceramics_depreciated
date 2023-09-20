@@ -31,6 +31,10 @@
   min-height: 300px;
 }
 
+.cta-about.s1 {
+  color: #ec4125 !important;
+}
+
 .cta-about{
   margin-top: 3rem;
   outline: none;

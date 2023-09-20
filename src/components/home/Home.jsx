@@ -6,7 +6,6 @@ import Footer from '../footer/Footer';
 
 const Home = () => (
   <Fragment>
-    {/* indexing */}
     <MetaTags>
       <title>Tiles & Wares: Kovad Ceramics</title>
       <meta
