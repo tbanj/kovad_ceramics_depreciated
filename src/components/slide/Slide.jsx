@@ -2,9 +2,9 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import './slide.css';
 import { Link } from 'react-router-dom';
-import slide1 from '../../assets/slide1.png';
-import slide2 from '../../assets/slide2.png';
-import slide3 from '../../assets/slide3.png';
+import slide1 from '../../assets/slide1_1.png';
+import slide2 from '../../assets/slide2_2.png';
+import slide3 from '../../assets/slide3_3.png';
 
 const Slide = () => (
   <Carousel className="carousel">
@@ -15,13 +15,14 @@ const Slide = () => (
         alt="First slide"
       />
       <Carousel.Caption className="caption">
-        <h3>Let's do it for you</h3>
-        <p>We provide business process outsource services that helps you save cost</p>
+        <h3 style={{ color: '#010111' }}>Let us be your supplier</h3>
+        {/* #010101 */}
+        <p style={{ color: '#010111' }}>
+          Our products prices are highly competitive
+        </p>
         <div className="cta">
           <Link to="/about">
-            <button className="cta-about">
-              About Us
-            </button>
+            <button className="cta-about">About Us</button>
           </Link>
         </div>
       </Carousel.Caption>
@@ -35,13 +36,11 @@ const Slide = () => (
       />
 
       <Carousel.Caption className="caption">
-        <h3>Let's collaborate together</h3>
-        <p>We provide business process outsource to enhance your prodcutivity</p>
+        <h3>Let's give your floors and walls new look</h3>
+        <p>Contact us for Spanish, Italian and Dubai tiles & ceramics</p>
         <div className="cta">
           <Link to="/about">
-            <button className="cta-about">
-              About Us
-            </button>
+            <button className="cta-about">About Us</button>
           </Link>
         </div>
       </Carousel.Caption>
@@ -55,13 +54,11 @@ const Slide = () => (
       />
 
       <Carousel.Caption className="caption">
-        <h3>Let's help your business grow</h3>
-        <p>We provide business process outsource services that help you focus on your competencies</p>
+        <h3>For home & Office Marbles</h3>
+        <p>Send in your request & we deliver</p>
         <div className="cta">
           <Link to="/about">
-            <button className="cta-about">
-              About Us
-            </button>
+            <button className="cta-about">About Us</button>
           </Link>
         </div>
       </Carousel.Caption>
