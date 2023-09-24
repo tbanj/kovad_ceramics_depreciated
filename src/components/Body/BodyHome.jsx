@@ -26,15 +26,11 @@ const BodyHome = () => (
                 <img src={hr} alt="hr" />
               </div>
 
-              <h4>HUMAN RESOURCE OUTSOURCING</h4>
-              <p>
-                Excellent Azel Flakes is a Human Capital Management Consultancy
-                offering HR consultancy, training and outsourcing services to
-                various organizations in the Pubic and Private Sectors.
-              </p>
+              <h4>Wholesales & Retails of Marbles</h4>
+              <p>Wholesales & Retails of Marbles</p>
 
               <div className="learn-more">
-                <Link to="/human-resource-outsourcing">
+                <Link to="/sales-marbles">
                   <i className="fa fa-long-arrow-right" />
                   <p className="excellent-red">Learn more</p>
                 </Link>
@@ -48,16 +44,11 @@ const BodyHome = () => (
                 <img src={logistics} alt="hr" />
               </div>
 
-              <h4>LOGISTIC AND HAULAGE OUTSOURCING</h4>
-              <p>
-                Excellent logistics and haulage services have over the years
-                offered consulting services in fleet management and leasing of
-                vehicles for multinational organizations, public and private
-                firms in Nigeria.
-              </p>
+              <h4>Wholesales & Retails of Ceramic Tiles</h4>
+              <p>Wholesales & Retails of Ceramic Tiles</p>
 
               <div className="learn-more">
-                <Link to="/logistics">
+                <Link to="/sales-tiles">
                   <i className="fa fa-long-arrow-right" />
                   <p className="excellent-red">Learn more</p>
                 </Link>
@@ -71,16 +62,11 @@ const BodyHome = () => (
                 <img src={call} alt="hr" />
               </div>
 
-              <h4>CALL CENTER SOLUTIONS</h4>
-              <p>
-                Excellent strategic megahub limited provides contact centre
-                services for various multinationals, Corporates , SMEs and
-                government agencies and parastatals. We provide seamless real
-                time agent monitoring,etc
-              </p>
+              <h4>Maintenance & Housekeeping of Tiles & Marbles</h4>
+              <p>Maintenance & Housekeeping of Tiles & Marbles</p>
 
               <div className="learn-more" id="three">
-                <Link to="/callcenter-solution">
+                <Link to="/maintenance">
                   <i className="fa fa-long-arrow-right" />
                   <p className="excellent-red">Learn more</p>
                 </Link>

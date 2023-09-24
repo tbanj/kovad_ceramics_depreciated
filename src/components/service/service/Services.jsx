@@ -12,40 +12,49 @@ import ServiceCard from '../ServiceCard';
 import Footer from '../../footer/Footer';
 import '../service.css';
 
-
-const Logistics = () => {
-  const text = 'Logistics';
+const Services = () => {
+  const text = 'Services';
 
   return (
     <Fragment>
-      {/* Metatags  brief explain of  Logistics for google bots */}
+      {/* Metatags  brief explain of  Services for google bots */}
       <MetaTags>
-        <title>Logistics Service: Excellent Group</title>
-        <meta name="description" content="We are a wholly owned indigenous company incorporated in Nigeria to offer superior logistics management services to diverse clients in the public and private sectors." />
-        <meta property="og:title" content="Logistics Service" />
-        <meta property="keywords" content="fleet management, corporate courier service, training of drivers, import/exportservices, Excellent Logistics and Logistics Services, ells," />
+        <title>
+          Installation, Maintenance and Repair Service: Kovad Ceramics
+        </title>
+        <meta
+          name="description"
+          content="We are a wholly owned indigenous company incorporated in Nigeria to render installation, maintenance and repair works on ceramics tiles and marbles."
+        />
+        <meta
+          property="og:title"
+          content="Installation, Maintenance and Repair Service"
+        />
+        <meta
+          property="keywords"
+          content="Installation of ceramics tiles, Maintenance of ceramics tiles, Repair Service of ceramics tiles"
+        />
       </MetaTags>
 
       <HeaderGeneral image={bannerImage} text={text} />
       <main>
-        <Fade delay={1000} >
+        <Fade delay={1000}>
           <section className="service-container">
-            <h3 className="section-title">Our Logistics Service</h3>
+            <h3 className="section-title">
+              Our Installation, Maintenance and Repair Service
+            </h3>
             <div className="service-text">
               <p>
                 We are a wholly owned indigenous company incorporated in Nigeria
-                to offer superior logistics management services to diverse clients
-                in the public and private sectors. We have over the years offered
-                consulting services in fleet management and leasing of vehicles
-                for multinational organizations, public and private firms in
-                Nigeria.
+                to offer installation, maintenance and repair works on ceramics
+                tiles and marbles.
                 <br /> <br /> As an innovative and service driven corporate
-                entity, Excellent Logistics and Logistics Services understand the
-                value of expertise, specialty and has continuously upheld them. We
-                also place great emphasis on providing our services in a safe and
-                environmental friendly manner. In line with this, we have
-                consistently developed a well-tailored and robust package to suit
-                our clients&#39; needs and adds value to them at a cost efficient
+                entity, Kovad Ceramics understand the value of expertise,
+                specialty and has continuously upheld them. We also place great
+                emphasis on providing our services in a safe and environmental
+                friendly manner. In line with this, we have consistently
+                developed a well-tailored and robust package to suit our
+                clients&#39; needs and adds value to them at a cost efficient
                 manner
               </p>
             </div>
@@ -54,19 +63,17 @@ const Logistics = () => {
 
         <section className="services">
           <div className="service-cards-container">
-            <ServiceCard image={fleet} title={'FLEET MANAGEMENT'} />
-            <ServiceCard image={courier} title={'CORPORATE COURIER SERVICES'} />
-            <ServiceCard image={drivers} title={'TRAINING OF DRIVERS'} />
-            <ServiceCard image={importation} title={'IMPORT/EXPORT SERVICES'} />
+            <ServiceCard image={fleet} title={'INSTALLATION SERVICE TEAM'} />
+            <ServiceCard image={courier} title={'MAINTENANCE SERVICE TEAM'} />
+            <ServiceCard image={drivers} title={'REPAIR SERVICE TEAM'} />
           </div>
         </section>
 
         <Form1 />
-
       </main>
       <Footer />
     </Fragment>
   );
 };
 
-export default Logistics;
+export default Services;

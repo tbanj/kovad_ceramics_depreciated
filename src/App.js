@@ -12,9 +12,7 @@ import './App.css';
 
 const About = lazy(() => import('./components/aboutus/AboutUs'));
 const Contact = lazy(() => import('./components/contact/Contact'));
-const Logistics = lazy(() =>
-  import('./components/service/logistics/Logistics')
-);
+const Service = lazy(() => import('./components/service/service/Services'));
 const HumanResource = lazy(() =>
   import('./components/service/hr/HumanResource')
 );
@@ -35,12 +33,19 @@ class App extends Component {
             <Suspense fallback={FullPageSpinner}>
               <Switch>
                 <Route exact path="/" component={Home} />
-                {/* <Route path="/about" component={About} />
+                <Route path="/about" component={About} />
                 <Route path="/contact" component={Contact} />
-                <Route path="/logistics" component={Logistics} />
-                <Route path="/human-resource-outsourcing" component={HumanResource} />
+                <Route path="/product" component={Logistics} />
+                <Route path="/service" component={Logistics} />
+                <Route
+                  path="/human-resource-outsourcing"
+                  component={HumanResource}
+                />
                 <Route path="/callcenter-solution" component={CallCenter} />
-                <Route path="/other-business-services" component={OtherServices} /> */}
+                <Route
+                  path="/other-business-services"
+                  component={OtherServices}
+                />
                 <Route component={NoMatch} />
               </Switch>
             </Suspense>
