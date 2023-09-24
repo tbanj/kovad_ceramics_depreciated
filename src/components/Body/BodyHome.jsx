@@ -15,12 +15,11 @@ const BodyHome = () => (
   <Fragment>
     <main className="body-home">
       <section>
-        <h3 className="section-title">
-          Our customized business process solutions
-        </h3>
+        <div className="d-flex justify-content-center">
+          <h3 className="section-title">Some of our services are</h3>
+        </div>
 
         <div className="card-container">
-
           <Fade bottom delay={1000}>
             <div className="one">
               <div className="service-img">
@@ -53,8 +52,8 @@ const BodyHome = () => (
               <p>
                 Excellent logistics and haulage services have over the years
                 offered consulting services in fleet management and leasing of
-                vehicles for multinational organizations, public and private firms
-                in Nigeria.
+                vehicles for multinational organizations, public and private
+                firms in Nigeria.
               </p>
 
               <div className="learn-more">
@@ -76,8 +75,8 @@ const BodyHome = () => (
               <p>
                 Excellent strategic megahub limited provides contact centre
                 services for various multinationals, Corporates , SMEs and
-                government agencies and parastatals. We provide seamless real time
-                agent monitoring,etc
+                government agencies and parastatals. We provide seamless real
+                time agent monitoring,etc
               </p>
 
               <div className="learn-more" id="three">
@@ -90,16 +89,16 @@ const BodyHome = () => (
           </Fade>
         </div>
         <span className="see-more">
-        <Link to="/logistics">
-          <button className="see-more-btn">See More</button>
-        </Link>
+          <Link to="/logistics">
+            <button className="see-more-btn">See More</button>
+          </Link>
         </span>
       </section>
 
       <section className="why-choose pt-5">
         <h3 className="text-right pr-5 excellent-red">Why choose our BPO?</h3>
 
-        <Assessment id={"pink-shade"} />
+        <Assessment id={'pink-shade'} />
       </section>
 
       <ConnectedEnterprise />
@@ -111,7 +110,7 @@ const BodyHome = () => (
               <h3>
                 Looking for a better way to transport your staffs to & from the
                 office
-            </h3>
+              </h3>
               <p>Engage Excellent Logistics Fleet Management Service today</p>
               <button>Get a Quote</button>
             </div>
