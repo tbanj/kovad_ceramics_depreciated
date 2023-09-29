@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import MetaTags from 'react-meta-tags';
 import { Link } from 'react-router-dom';
-import hr from '../../assets/hr.png';
-import logistics from '../../assets/logistics.png';
-import call from '../../assets/headphone.png';
+import marble from '../../assets/marble_3_dark.png';
+import tiles from '../../assets/tiles.png';
+import maintenance_2 from '../../assets/maintenance_2.png';
 import fleet from '../../assets/fleet.png';
 import './bodyhome.css';
 import Form1 from '../forms/Form1';
@@ -15,7 +15,7 @@ const BodyHome = () => (
   <Fragment>
     <main className="body-home">
       <section>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center pt-4">
           <h3 className="section-title">Some of our services are</h3>
         </div>
 
@@ -23,7 +23,7 @@ const BodyHome = () => (
           <Fade bottom delay={1000}>
             <div className="one">
               <div className="service-img">
-                <img src={hr} alt="hr" />
+                <img src={marble} alt="marble" />
               </div>
 
               <h4>Wholesales & Retails of Marbles</h4>
@@ -41,7 +41,7 @@ const BodyHome = () => (
           <Fade bottom delay={1200}>
             <div className="one">
               <div className="service-img bus">
-                <img src={logistics} alt="hr" />
+                <img src={tiles} alt="tiles" style={{ maxWidth: '60px' }} />
               </div>
 
               <h4>Wholesales & Retails of Ceramic Tiles</h4>
@@ -59,7 +59,7 @@ const BodyHome = () => (
           <Fade bottom delay={1400}>
             <div className="one">
               <div className="service-img">
-                <img src={call} alt="hr" />
+                <img src={maintenance_2} alt="maintenance_2" />
               </div>
 
               <h4>Maintenance & Housekeeping of Tiles & Marbles</h4>
@@ -81,7 +81,7 @@ const BodyHome = () => (
         </span>
       </section>
 
-      <section className="why-choose pt-5">
+      {/* <section className="why-choose pt-5">
         <h3 className="text-right pr-5 excellent-red">Why choose our BPO?</h3>
 
         <Assessment id={'pink-shade'} />
@@ -107,7 +107,7 @@ const BodyHome = () => (
             </div>
           </div>
         </section>
-      </Fade>
+      </Fade> */}
 
       <Form1 />
     </main>
