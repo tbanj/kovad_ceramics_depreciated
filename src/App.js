@@ -13,6 +13,7 @@ import './App.css';
 const About = lazy(() => import('./components/aboutus/AboutUs'));
 const Contact = lazy(() => import('./components/contact/Contact'));
 const Service = lazy(() => import('./components/service/service/Services'));
+const Products = lazy(() => import('./components/service/products/Products'));
 const HumanResource = lazy(() =>
   import('./components/service/hr/HumanResource')
 );
@@ -35,8 +36,8 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
                 <Route path="/contact" component={Contact} />
-                <Route path="/product" component={Logistics} />
-                <Route path="/service" component={Logistics} />
+                <Route path="/products" component={Products} />
+                <Route path="/services" component={Service} />
                 <Route
                   path="/human-resource-outsourcing"
                   component={HumanResource}

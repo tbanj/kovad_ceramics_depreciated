@@ -28,7 +28,11 @@ const Navbar = () => {
           />
         </div>
 
-        <ul className={`nav-list ${isOpen && 'active'}`}>
+        <ul
+          className={`nav-list ${
+            isOpen ? 'active' : 'justify-content-end w-100'
+          }`}
+        >
           <div className="menu-icons close">
             <MdClose
               onClick={toggle}
@@ -54,7 +58,7 @@ const Navbar = () => {
               activeClassName="selected"
               className="nav-link"
             >
-              Service
+              Services
             </NavLink>
             <ul className="sub-nav">
               <Link to="/service" className="excellent-red">
@@ -74,17 +78,17 @@ const Navbar = () => {
           <li className="nav-item nested-nav-container">
             <NavLink
               exact
-              to="/product"
+              to="/products"
               activeClassName="selected"
               className="nav-link"
             >
-              Product
+              Products
             </NavLink>
             <ul className="sub-nav">
-              <Link to="/product-ceramics" className="excellent-red">
+              <Link to="/products-ceramics" className="excellent-red">
                 <li>Ceramics</li>
               </Link>
-              <Link to="/product-tiles" className="excellent-red">
+              <Link to="/products-tiles" className="excellent-red">
                 <li>Tiles</li>
               </Link>
             </ul>
