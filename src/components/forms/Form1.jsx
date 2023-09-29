@@ -1,8 +1,9 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import MdTime from 'react-ionicons/lib/MdTime';
-import { toast } from "react-toastify";
-import EnquiryService from '../httpService/EnquiryService'
-import './form1.css'; import mail from '../../assets/mail.svg';
+import { toast } from 'react-toastify';
+import EnquiryService from '../httpService/EnquiryService';
+import './form1.css';
+import mail from '../../assets/mail.svg';
 import location from '../../assets/location.svg';
 import phone from '../../assets/phone.svg';
 import Fade from 'react-reveal/Fade';
@@ -20,41 +21,50 @@ const Form1 = () => {
     console.log({ name, email, message });
 
     const serverData = {
-      "token": 1234, "subject": "Enquiry", "message": `<html><div><p style="font-size: 1.5rem;">Client Name: ${name}</p>
+      token: 1234,
+      subject: 'Enquiry',
+      message: `<html><div><p style="font-size: 1.5rem;">Client Name: ${name}</p>
      
-      <p style="font-size: 1.5rem;">${message}</p></div></html>`, "name": name,
-      "email": "info@excellentng.com", "email2": email
-    }
+      <p style="font-size: 1.5rem;">${message}</p></div></html>`,
+      name: name,
+      email: 'info@excellentng.com',
+      email2: email,
+    };
 
     _isMounted = true;
     if (_isMounted === true) {
-      enquiryService.create(serverData).then(
-        (response) => {
-          if (response) {
-            toast.success(`Enquiry submitted ${name} we will be in touch`);
-            // POST REQUEST HERE
-            setName(''); setEmail(''); setMessage('');
+      enquiryService
+        .create(serverData)
+        .then(
+          (response) => {
+            if (response) {
+              toast.success(`Enquiry submitted ${name} we will be in touch`);
+              // POST REQUEST HERE
+              setName('');
+              setEmail('');
+              setMessage('');
+            }
+          },
+          (error) => {
+            console.log(error);
           }
-        }, (error => { console.log(error) }))
-        .catch(error => {
-          toast.error("Enquiry was not sent")
+        )
+        .catch((error) => {
+          toast.error('Enquiry was not sent');
         });
     }
-
   };
 
   useEffect(() => {
     return () => {
       _isMounted = false;
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <Fragment>
       <section className="quick-contact-1">
-        <h3 className="section-title">
-          Quick Contact
-        </h3>
+        <h3 className="section-title">Quick Contact</h3>
         <Fade bottom>
           <div className="quick-contact-container">
             <div className="contact-info">
@@ -62,17 +72,17 @@ const Form1 = () => {
               <div className="contact-location">
                 <img src={location} alt="location icon" />
                 <p>
-                  Site G02, Spaaco House, 27a Macarthy <br />
-                street Onikan, Lagos, Nigeria.
-              </p>
+                  142, Lawanson Road, Otun-Oba Bus-stop, <br /> Itire, Lagos,
+                  Nigeria.
+                </p>
               </div>
               <div className="contact-location">
                 <img src={phone} alt="location icon" />
-                <p href="tel:234-802-312-3876">08023123876</p>
+                <p href="tel:234-802-312-3876">07050698626</p>
               </div>
               <div className="contact-location">
                 <img src={mail} alt="location icon" />
-                <p>info@excellentng.com</p>
+                <p>info@kovadceramics.com</p>
               </div>
               <div className="contact-location special">
                 <MdTime
@@ -101,7 +111,7 @@ const Form1 = () => {
                           type="text"
                           name="name"
                           value={name}
-                          onChange={e => setName(e.target.value)}
+                          onChange={(e) => setName(e.target.value)}
                           required
                         />
                       </fieldset>
@@ -111,7 +121,7 @@ const Form1 = () => {
                           name="email"
                           type="email"
                           value={email}
-                          onChange={e => setEmail(e.target.value)}
+                          onChange={(e) => setEmail(e.target.value)}
                           required
                         />
                       </fieldset>
@@ -120,12 +130,14 @@ const Form1 = () => {
                           placeholder="Type your message here...."
                           name="message"
                           value={message}
-                          onChange={e => setMessage(e.target.value)}
+                          onChange={(e) => setMessage(e.target.value)}
                           required
                         />
                       </fieldset>
                       <fieldset className="shake-button">
-                        <button name="submit" type="submit">Send</button>
+                        <button name="submit" type="submit">
+                          Send
+                        </button>
                       </fieldset>
                     </div>
                   </form>
