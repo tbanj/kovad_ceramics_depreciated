@@ -49,17 +49,17 @@ const Footer = () => (
             <div className="contact-location">
               <img src={location} alt="location icon" />
               <h6>
-                Site G02, Spaaco House, 27a Macarthy <br />
-                street Onikan, Lagos, Nigeria.
+                142, Lawanson Road, Otun-Oba Bus-stop, <br /> Itire, Lagos,
+                Nigeria.
               </h6>
             </div>
             <div className="contact-location">
               <img src={phone} alt="phone icon" />
-              <h6 href="tel:234-802-312-3876">08023123876</h6>
+              <h6 href="tel:234-802-312-3876">07050698626</h6>
             </div>
             <div className="contact-location">
               <img src={mail} alt="mail icon" />
-              <h6>info@excellentng.com</h6>
+              <h6>info@kovadceramics.com</h6>
             </div>
 
             <div className="contact-location special">

@@ -6,7 +6,6 @@ import hours from '../../assets/hours-red.svg';
 import './bodycontact.css';
 import Form2 from '../forms/Form2';
 
-
 const BodyContact = () => (
   <main>
     <section>
@@ -16,25 +15,28 @@ const BodyContact = () => (
           <div className="contact-image-container">
             <img src={location} alt="location icon" />
           </div>
-          <h6>Site G02, Spaaco House, 27a  <br />Macarthy street Onikan, Lagos, Nigeria.</h6>
+          <h6>
+            142, Lawanson Road, Otun-Oba <br />
+            Bus-stop, Itire, Lagos, Nigeria.
+          </h6>
         </div>
         <div className="contact-item">
           <div className="contact-image-container">
             <img src={phone} alt="phone icon" style={{ color: 'blue' }} />
           </div>
-          <h6 href="tel:234-802-312-3876">08023123876</h6>
+          <h6 href="tel:234-802-312-3876">07050698626</h6>
         </div>
         <div className="contact-item">
           <div className="contact-image-container">
             <img src={mail} alt="mail icon" />
           </div>
-          <h6>info@excellentng.com</h6>
+          <h6>info@kovadceramics.com</h6>
         </div>
         <div className="contact-item">
           <div className="contact-image-container">
             <img src={hours} alt="work hours icon" style={{ color: 'blue' }} />
           </div>
-          <h6>Mon - Friday  8am - 5pm</h6>
+          <h6>Mon - Friday 8am - 5pm</h6>
         </div>
       </div>
     </section>
@@ -42,10 +44,22 @@ const BodyContact = () => (
     <section>
       <div className="contact-group2">
         <div className="contact-social-container">
-          <a href="#"> <i className="fa fa-facebook" /></a>
-          <a href="#"> <i className="fa fa-twitter" /></a>
-          <a href="#"> <i className="fa fa-instagram" /></a>
-          <a href="#"> <i className="fa fa-linkedin-square" /></a>
+          <a href="#">
+            {' '}
+            <i className="fa fa-facebook" />
+          </a>
+          <a href="#">
+            {' '}
+            <i className="fa fa-twitter" />
+          </a>
+          <a href="#">
+            {' '}
+            <i className="fa fa-instagram" />
+          </a>
+          <a href="#">
+            {' '}
+            <i className="fa fa-linkedin-square" />
+          </a>
         </div>
         <div className="form2-container">
           <Form2 />
@@ -63,7 +77,6 @@ const BodyContact = () => (
         </div>
       </div>
     </section>
-
   </main>
 );
 
