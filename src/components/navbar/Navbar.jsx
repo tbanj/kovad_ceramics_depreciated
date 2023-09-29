@@ -3,6 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import MdMenu from 'react-ionicons/lib/MdMenu';
 import MdClose from 'react-ionicons/lib/MdClose';
 import logo from '../../assets/logo.png';
+import useWindowDimensions from '../../hooks/UseWindowDimensions';
 import './navbar.css';
 
 const Navbar = () => {
@@ -10,9 +11,11 @@ const Navbar = () => {
 
   const toggle = () => setIsOpen(!isOpen);
 
+  const { width } = useWindowDimensions();
+
   return (
     <Fragment>
-      <nav>
+      <nav className="flex">
         <div className="nav-brand">
           <Link to="/">
             <img src={logo} alt="logo" />
@@ -30,18 +33,22 @@ const Navbar = () => {
 
         <ul
           className={`nav-list ${
-            isOpen ? 'active' : 'justify-content-end w-100'
-          }`}
+            width > 768 && !isOpen
+              ? 'justify-content-end w-100'
+              : width < 768 && isOpen
+              ? 'active'
+              : 'd-none'
+          }   `}
         >
-          <div className="menu-icons close">
+          <div className={`menu-icons close`}>
             <MdClose
-              onClick={toggle}
+              onClick={() => setIsOpen(false)}
               fontSize="35px"
               color="#fafafa"
               style={{ cursor: 'pointer' }}
             />
           </div>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <NavLink
               exact
               to="/"
@@ -50,7 +57,7 @@ const Navbar = () => {
             >
               Home
             </NavLink>
-          </li>
+          </li> */}
           <li className="nav-item nested-nav-container">
             <NavLink
               exact
