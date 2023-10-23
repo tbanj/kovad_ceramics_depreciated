@@ -18,18 +18,22 @@ import Form1 from '../../forms/Form1';
 import Footer from '../../footer/Footer';
 import '../service.css';
 
-
 const CallCenter = () => {
   const text = 'Call Center Solutions';
 
   return (
     <Fragment>
-
       <MetaTags>
-        <title>Call Center: Excellent Group</title>
-        <meta name="description" content="Excellent strategic megahub limited provides contact centre services for various multinationals, Corporates , SMEs and government agencies and parastatals. " />
+        <title>Call Center: Kovad Ceramics</title>
+        <meta
+          name="description"
+          content="Excellent strategic megahub limited provides contact centre services for various multinationals, Corporates , SMEs and government agencies and parastatals. "
+        />
         <meta property="og:title" content="Call Center" />
-        <meta property="keywords" content="real time agent monitoring, CRM integration, call recording, social, web, chat, email interaction interfaces, inbound and outbound customer service, management services" />
+        <meta
+          property="keywords"
+          content="real time agent monitoring, CRM integration, call recording, social, web, chat, email interaction interfaces, inbound and outbound customer service, management services"
+        />
       </MetaTags>
 
       <HeaderGeneral image={bannerImage} text={text} />
@@ -58,9 +62,11 @@ const CallCenter = () => {
             <ServiceCard image={enquires} title={'CUSTOMER ENQUIRIES'} />
             <ServiceCard image={enrollment} title={'PRODUCT ENROLLMENT'} />
             <ServiceCard image={digital} title={'DIGITAL MARKETING'} />
-            <ServiceCard image={connected} title={'INBOUND AND OUTBOUND COMUNICATION'} />
+            <ServiceCard
+              image={connected}
+              title={'INBOUND AND OUTBOUND COMUNICATION'}
+            />
           </div>
-
         </section>
 
         <ConnectedEnterprise />
@@ -70,7 +76,6 @@ const CallCenter = () => {
           <div className="partner-image-container">
             <img src={partner1} alt="partners " />
           </div>
-
         </section>
 
         <Form1 />

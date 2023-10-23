@@ -4,7 +4,8 @@ import Pulse from 'react-reveal/Pulse';
 import './bodyabout.css';
 import smilingLady from '../../assets/excellent-group.png';
 import yetunde from '../../assets/yetunde.png';
-import imagePlaceholder from '../../assets/imagePlaceholder.png';
+// import imagePlaceholder from '../../assets/imagePlaceholder.png';
+import imagePlaceholder from '../../assets/img_avatar.png';
 import ciroma from '../../assets/ciroma.png';
 import ring from '../../assets/ring.png';
 
@@ -12,7 +13,7 @@ const BodyAbout = () => (
   <Fragment>
     <main className="body-about">
       <section>
-        <h3 className="section-title">Excellent Group</h3>
+        <h3 className="section-title">Kovad Ceramics</h3>
 
         <div className="excellent-group-container1">
           <div className="excellent-group-container2">
@@ -24,29 +25,31 @@ const BodyAbout = () => (
             <Fade right>
               <div className="excellent-group-text">
                 <p>
-                  Excellent Group consists of three thriving companies namely:
-              </p>
+                  Kovad Ceramics is a subsidiary company of Kovad Ventures.
+                  Kovad Ceramics includes:
+                </p>
                 <ul>
-                  <li>Excellent Logistics and Haulage Services Limited</li>
-                  <li>Excellent Strategic Megahub Limited </li>
-                  <li>Excellent Azel Flakes Consulting Limited</li>
+                  <li>Kovad Ceramics Sales of Tiles & Marbles</li>
+                  <li>
+                    Kovad Ceramics Installation & Maintenance of Tiles & Marbles{' '}
+                  </li>
                 </ul>
                 <p>
                   The companies are registered as limited liability companies
-                  under the Company and Allied Matters Act of 1990. Our Principals
-                  have over 100 years of combined experience in Banking, Human
-                  resource management Consultancy, telecommunications, Project
-                  management, Logistics , Strategy and Finance. Our personnel have
-                  the right skills and experience to create bespoke and unique
-                  solutions for various needs and challenges in our fields of
-                  service. Today, we are a recognised partner to major
-                  multinationals, corporates, SMEs and government organizations.
-                  We employ the latest technology to deliver unrivaled services in
-                  line with global best practices. At Excellent group, we work to
-                  the highest standards of professionalism, confidentiality, and
-                  discretion. Working with you and for you in partnership to find
-                  lasting solutions
-              </p>
+                  under the Company and Allied Matters Act of 1990. Our
+                  Principals have over 40 years of combined experience in
+                  sourcing the best quality tiles and marbles from any part of
+                  the world, at an affordable market price to our end users. We
+                  added installation and maintenance services of tiles and
+                  marbles to our service delivery lists so that our customers
+                  which are home owners won't need to go through stress of how
+                  they can get a trustworthy and top class tilers or marbles
+                  installers technicians. Our personnel have the right skills
+                  and experience to deliver bespoke and highly acceptable
+                  standard when you engage our service. Today, we are recognised
+                  as trustworthy wholesalers of tiles and marbles in Nigeria
+                  which all the products we sell are SON certified.
+                </p>
               </div>
             </Fade>
           </div>
@@ -73,44 +76,49 @@ const BodyAbout = () => (
       </div>
       <section />
 
-      <section className="values">
+      {/* <section className="values">
         <h3 className="section-title pr-5 pb-4">Company values</h3>
         <Pulse>
           <div className="values-image-container">
             <img src={ring} alt="company values" />
           </div>
         </Pulse>
-      </section>
+      </section> */}
 
       <section className="directors mt-5">
-        <h3 className="section-title text-right pr-5">Directors</h3>
+        <h3 className="section-title text-right pr-5">Meet Our Team</h3>
         <Fade>
           <div className="directors-container">
             <div className="director-container">
               <div className="director-image-container pb-3">
                 <img src={imagePlaceholder} alt="director1" />
               </div>
-              <h4>Mr Richard Oluranti Omole</h4>
+              <h4>Mr Abimbola Ajao</h4>
               <p>Chairman</p>
             </div>
 
             <div className="director-container">
               <div className="director-image-container pb-3">
-                <img src={yetunde} alt="director2" />
+                <img src={imagePlaceholder} alt="director2" />
               </div>
-              <h4>Mrs Yetunde Jaiyesimi</h4>
-              <p>Managing Director</p>
+              <meta
+                property="keywords"
+                content="Who founded Kovad Ceramics Mr. Abimbola Ajao, Director Mr. Toheeb Adetunde, 
+        Chairman Mr. Abimbola Ajao, CTO Mr. Olabanji Smith"
+              />
+              <h4>Mr. Toheeb Adetunde</h4>
+              <p>Director</p>
             </div>
 
             <div className="director-container">
               <div className="director-image-container pb-3">
                 <img src={imagePlaceholder} alt="director3" />
               </div>
-              <h4>Mr Olufemi Jaiyesimi</h4>
-              <p>Director</p>
+              <h4>Mr Olabanji Smith</h4>
+              <p>C.T.O</p>
             </div>
 
-            <div className="director-container">
+            {/* <div className="director-container">
               <div className="director-image-container pb-3">
                 <img src={imagePlaceholder} alt="director4" />
               </div>
@@ -124,7 +132,7 @@ const BodyAbout = () => (
               </div>
               <h4>Mr Mohammed Ciroma</h4>
               <p>Director</p>
-            </div>
+            </div> */}
           </div>
         </Fade>
       </section>

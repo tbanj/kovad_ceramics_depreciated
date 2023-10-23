@@ -17,10 +17,16 @@ const OtherServices = () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Other Business Services: Excellent Group</title>
-        <meta name="description" content="Excellent group is structured and equipped to provide the following business support services " />
+        <title>Other Business Services: Kovad Ceramics</title>
+        <meta
+          name="description"
+          content="Kovad Ceramics is structured and equipped to provide the following business support services "
+        />
         <meta property="og:title" content="Other Business Services" />
-        <meta property="keywords" content="business management, general contract, supply chain management," />
+        <meta
+          property="keywords"
+          content="business management, general contract, supply chain management,"
+        />
       </MetaTags>
 
       <HeaderGeneral image={bannerImage} text={text} />
@@ -30,8 +36,8 @@ const OtherServices = () => {
 
           <div className="service-text">
             <p>
-              Excellent group is structured and equipped to provide the
-              following business support services:
+              Kovad Ceramics is structured and equipped to provide the following
+              business support services:
             </p>
           </div>
         </section>
