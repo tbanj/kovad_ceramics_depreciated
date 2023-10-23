@@ -13,19 +13,24 @@ import ServiceCard from '../ServiceCard';
 import Footer from '../../footer/Footer';
 import '../service.css';
 
-
 const HumanResource = () => {
   const text = 'Human Resource Outsourcing';
 
   return (
     <Fragment>
       <MetaTags>
-        <title>Human Resources: Excellent Group</title>
-        <meta name="description" content="Our Human Capital Management Consultancy offers HR consultancy, training and outsourcing services to various organizations in the Pubic and Private Sectors. " />
+        <title>Human Resources: Kovad Ceramics</title>
+        <meta
+          name="description"
+          content="Our Human Capital Management Consultancy offers HR consultancy, training and outsourcing services to various organizations in the Pubic and Private Sectors. "
+        />
         <meta property="og:title" content="Human Resources" />
-        <meta property="keywords" content="Human Resource Consultancy,
+        <meta
+          property="keywords"
+          content="Human Resource Consultancy,
     Management Training ,Strategic Planning, Management efficiency, Performance Measurement, Customer Service, Leadership,Team Building,
-    Industrial Engineering Training,  Outsourcing of Professional, Temporary,Contract staff" />
+    Industrial Engineering Training,  Outsourcing of Professional, Temporary,Contract staff"
+        />
       </MetaTags>
 
       <HeaderGeneral image={bannerImage} text={text} />
@@ -50,7 +55,6 @@ const HumanResource = () => {
           </div>
         </section>
 
-
         <section className="services">
           <div className="service-cards-container">
             <ServiceCard image={consulting} title={'CONSULTING'} />
@@ -61,7 +65,7 @@ const HumanResource = () => {
         </section>
 
         <section>
-          <Assessment id={"pink-shade"} />
+          <Assessment id={'pink-shade'} />
         </section>
 
         <Form1 />
