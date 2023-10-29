@@ -78,15 +78,7 @@ const Form2 = () => {
                   required
                 />
               </fieldset>
-              <fieldset>
-                <input
-                  placeholder="Your Email Address"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </fieldset>
+
               <fieldset>
                 <input
                   placeholder="Your Phone Number"

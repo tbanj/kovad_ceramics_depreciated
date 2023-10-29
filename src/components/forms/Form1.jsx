@@ -18,10 +18,9 @@ const Form1 = () => {
   const [message, setMessage] = useState('');
 
   // Handler function for the email button click
-  const handleEmailButtonClick = () => {
-    if (email && message && name) {
-      const subject = document.querySelector('input[name="subject"]').value;
-      const body = document.querySelector('textarea[name="body"]').value;
+  const handleEmailButtonClick = (e) => {
+    e.preventDefault();
+    if (message && name) {
       const mailtoLink = `mailto:info@kovadceramics.com?subject=${encodeURIComponent(
         `Enguiry from ${name}`
       )}&body=${encodeURIComponent(message)}`;
@@ -82,7 +81,6 @@ const Form1 = () => {
   }, []);
 
   console.warn('_isMounted', _isMounted);
-  console.warn('emailAccount', emailAccount);
   return (
     <Fragment>
       <section className="quick-contact-1">
