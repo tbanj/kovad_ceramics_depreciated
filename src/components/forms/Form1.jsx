@@ -9,8 +9,48 @@ import phone from '../../assets/phone.svg';
 import Fade from 'react-reveal/Fade';
 
 const enquiryService = new EnquiryService();
+
 const Form1 = () => {
   let _isMounted = false;
+  const [emailAccount, setEmailAccount] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // Check if the email account is found when the component loads
+    const mailtoLink = `mailtto:?subject=ade-subject&body=body-data`;
+    /* try {
+      window.location.href = mailtoLink;
+    } catch (err) {
+      setError(err.message); // Store the error message in the state
+    }
+  } else {
+    setError('No email account found. Cannot trigger email.');
+  } */
+    const checkMailOpen = async (mailtoLink) => {
+      try {
+        window.location.href = mailtoLink;
+      } catch (err) {
+        console.log('err.message', err);
+        setError(err.message); // Store the error message in the state
+      }
+    };
+
+    checkMailOpen(mailtoLink);
+  }, []);
+
+  // Handler function for the email button click
+  const handleEmailButtonClick = () => {
+    if (emailAccount) {
+      const subject = document.querySelector('input[name="subject"]').value;
+      const body = document.querySelector('textarea[name="body"]').value;
+      const mailtoLink = `mailto:?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoLink;
+    } else {
+      alert('No email account found. Cannot trigger email.');
+    }
+  };
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -61,6 +101,8 @@ const Form1 = () => {
     };
   }, []);
 
+  console.warn('_isMounted', _isMounted);
+  console.warn('emailAccount', emailAccount);
   return (
     <Fragment>
       <section className="quick-contact-1">
