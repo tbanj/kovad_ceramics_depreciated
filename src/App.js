@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import FullPageSpinner from './components/loader/FullPageSpinner';
 import Home from './components/home/Home';
 import Maintenance from './components/maintenance/Maintenance';
+import TestCom from './components/testCom/TestCom';
 import NoMatch from './components/notfound/NotFound';
 import ErrorBoundary from './components/errorBoundary/ErrorBoundary';
 import 'react-toastify/dist/ReactToastify.css';
@@ -35,6 +36,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
+                <Route path="/test-data" component={TestCom} />
                 <Route path="/contact" component={Contact} />
                 <Route path="/products" component={Products} />
                 <Route path="/services" component={Service} />
