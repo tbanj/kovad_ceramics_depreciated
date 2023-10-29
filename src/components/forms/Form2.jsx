@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { toast } from "react-toastify";
-import EnquiryService from '../httpService/EnquiryService.js'
+import { toast } from 'react-toastify';
+import EnquiryService from '../httpService/EnquiryService.js';
 import './form2.css';
 
 const enquiryService = new EnquiryService();
@@ -15,39 +15,52 @@ const Form2 = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log({
-      name, email, mobile, message
+      name,
+      email,
+      mobile,
+      message,
     });
 
     const serverData = {
-      "token": 1234, "subject": "Enquiry", "message": `<html><div><p style="font-size: 1.5rem;">Client Name: ${name}</p>
+      token: 1234,
+      subject: 'Enquiry',
+      message: `<html><div><p style="font-size: 1.5rem;">Client Name: ${name}</p>
       <p style="font-size: 1.5rem;">Phone: ${mobile}</p>
-      <p style="font-size: 1.5rem;">${message}</p></div></html>`, "name": name,
-      "email": "info@excellentng.com", "email2": email
-    }
+      <p style="font-size: 1.5rem;">${message}</p></div></html>`,
+      name: name,
+      email: 'info@kovadceramics.com',
+      email2: email,
+    };
 
     _isMounted = true;
     if (_isMounted === true) {
-      enquiryService.create(serverData).then(
-        (response) => {
-          if (response) {
-            toast.success(`Enquiry submitted ${name} we will be in touch`);
-            // POST REQUEST HERE
-            setName(''); setEmail(''); setMobile(''); setMessage('');
+      enquiryService
+        .create(serverData)
+        .then(
+          (response) => {
+            if (response) {
+              toast.success(`Enquiry submitted ${name} we will be in touch`);
+              // POST REQUEST HERE
+              setName('');
+              setEmail('');
+              setMobile('');
+              setMessage('');
+            }
+          },
+          (error) => {
+            console.log(error);
           }
-        }, (error => { console.log(error) }))
-        .catch(error => {
-          toast.error("Enquiry was not sent")
+        )
+        .catch((error) => {
+          toast.error('Enquiry was not sent');
         });
     }
-
-
-
   };
   useEffect(() => {
     return () => {
       _isMounted = false;
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <Fragment>
@@ -61,7 +74,7 @@ const Form2 = () => {
                   placeholder="Your name"
                   type="text"
                   value={name}
-                  onChange={e => setName(e.target.value)}
+                  onChange={(e) => setName(e.target.value)}
                   required
                 />
               </fieldset>
@@ -70,7 +83,7 @@ const Form2 = () => {
                   placeholder="Your Email Address"
                   type="email"
                   value={email}
-                  onChange={e => setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </fieldset>
@@ -82,7 +95,7 @@ const Form2 = () => {
                   value={mobile}
                   minLength="11"
                   maxLength="11"
-                  onChange={e => setMobile(e.target.value)}
+                  onChange={(e) => setMobile(e.target.value)}
                   required
                 />
               </fieldset>
@@ -90,12 +103,14 @@ const Form2 = () => {
                 <textarea
                   placeholder="Type your message here...."
                   value={message}
-                  onChange={e => setMessage(e.target.value)}
+                  onChange={(e) => setMessage(e.target.value)}
                   required
                 />
               </fieldset>
               <fieldset className="text-center">
-                <button name="submit" type="submit">Send</button>
+                <button name="submit" type="submit">
+                  Send
+                </button>
               </fieldset>
             </div>
           </form>
@@ -104,6 +119,5 @@ const Form2 = () => {
     </Fragment>
   );
 };
-
 
 export default Form2;
