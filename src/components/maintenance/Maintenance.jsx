@@ -12,12 +12,12 @@ const Maintenance = () => {
         <title>Maintenance : Kovad Ceramics</title>
         <meta
           name="description"
-          content="Kovad Ceramics Website is under maintenance. Kindly visit  after a while, https://www.excellentng.com"
+          content="Kovad Ceramics Website is under maintenance. Kindly visit  after a while, https://www.kovadceramics.com"
         />
         <meta property="og:title" content="404 Error Page" />
         <meta
           property="keywords"
-          content="Kovad Ceramics, maintenance, construction, development .  eghro, business process outsourcing, egbpo, Kindly visit  after a while, https://www.excellentng.com "
+          content="Kovad Ceramics, maintenance, construction, development .  eghro, business process outsourcing, egbpo, Kindly visit  after a while, https://www.kovadceramics.com "
         />
       </MetaTags>
       {/* <div className="container pt-5">

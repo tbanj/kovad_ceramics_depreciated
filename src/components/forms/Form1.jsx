@@ -12,49 +12,29 @@ const enquiryService = new EnquiryService();
 
 const Form1 = () => {
   let _isMounted = false;
-  const [emailAccount, setEmailAccount] = useState(null);
   const [error, setError] = useState(null);
-
-  useEffect(() => {
-    // Check if the email account is found when the component loads
-    const mailtoLink = `mailtto:?subject=ade-subject&body=body-data`;
-    /* try {
-      window.location.href = mailtoLink;
-    } catch (err) {
-      setError(err.message); // Store the error message in the state
-    }
-  } else {
-    setError('No email account found. Cannot trigger email.');
-  } */
-    const checkMailOpen = async (mailtoLink) => {
-      try {
-        window.location.href = mailtoLink;
-      } catch (err) {
-        console.log('err.message', err);
-        setError(err.message); // Store the error message in the state
-      }
-    };
-
-    checkMailOpen(mailtoLink);
-  }, []);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   // Handler function for the email button click
   const handleEmailButtonClick = () => {
-    if (emailAccount) {
+    if (email && message && name) {
       const subject = document.querySelector('input[name="subject"]').value;
       const body = document.querySelector('textarea[name="body"]').value;
-      const mailtoLink = `mailto:?subject=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailtoLink;
+      const mailtoLink = `mailto:info@kovadceramics.com?subject=${encodeURIComponent(
+        `Enguiry from ${name}`
+      )}&body=${encodeURIComponent(message)}`;
+
+      try {
+        window.location.href = mailtoLink;
+      } catch (err) {
+        setError(err.message); // Store the error message in the state
+      }
     } else {
       alert('No email account found. Cannot trigger email.');
     }
   };
-
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -67,7 +47,7 @@ const Form1 = () => {
      
       <p style="font-size: 1.5rem;">${message}</p></div></html>`,
       name: name,
-      email: 'info@excellentng.com',
+      email: 'info@kovadceramics.com',
       email2: email,
     };
 
@@ -143,7 +123,7 @@ const Form1 = () => {
             <div className="form-1">
               <div className="form1-container">
                 <div className="inner-container">
-                  <form id="contact" onSubmit={handleSubmit}>
+                  <form id="contact" onSubmit={handleEmailButtonClick}>
                     <h3>Get in touch</h3>
                     <h4>Feel free to drop us a message</h4>
                     <div className="fields-container">
@@ -157,7 +137,7 @@ const Form1 = () => {
                           required
                         />
                       </fieldset>
-                      <fieldset>
+                      {/* <fieldset>
                         <input
                           placeholder="Your Email Address"
                           name="email"
@@ -166,7 +146,7 @@ const Form1 = () => {
                           onChange={(e) => setEmail(e.target.value)}
                           required
                         />
-                      </fieldset>
+                      </fieldset> */}
                       <fieldset>
                         <textarea
                           placeholder="Type your message here...."
