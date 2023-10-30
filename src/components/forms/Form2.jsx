@@ -6,11 +6,12 @@ import './form2.css';
 const enquiryService = new EnquiryService();
 const Form2 = () => {
   let _isMounted = false;
-
+  const [error, setError] = useState(null);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState('');
+  const [title, setTitle] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -56,6 +57,33 @@ const Form2 = () => {
         });
     }
   };
+
+  const handleEmailButtonClick = (e) => {
+    e.preventDefault();
+    if (message && name) {
+      const mailtoLink = `mailto:info@kovadceramics.com?subject=${encodeURIComponent(
+        `Enguiry from ${name}`
+      )}&body=${encodeURIComponent(`<html>
+      ${message}
+      <p>Your Contact Number: ${mobile}</p>
+      <p>Best Regards</p>
+      <p>${name}</p>  
+      
+      
+      </html> `)}`;
+
+      try {
+        window.location.href = mailtoLink;
+      } catch (err) {
+        setError(err.message);
+      }
+    } else {
+      alert('No email account found. Cannot trigger email.');
+    }
+    setMessage('');
+    setName('');
+  };
+
   useEffect(() => {
     return () => {
       _isMounted = false;
@@ -81,13 +109,22 @@ const Form2 = () => {
 
               <fieldset>
                 <input
-                  placeholder="Your Phone Number"
+                  placeholder="Your phone number"
                   type="tel"
                   pattern="^[0]\d{10}$"
                   value={mobile}
                   minLength="11"
                   maxLength="11"
                   onChange={(e) => setMobile(e.target.value)}
+                  required
+                />
+              </fieldset>
+              <fieldset>
+                <input
+                  placeholder="Message title"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setTitle(e.target.value)}
                   required
                 />
               </fieldset>

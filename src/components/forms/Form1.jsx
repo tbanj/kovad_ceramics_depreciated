@@ -16,6 +16,7 @@ const Form1 = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [title, setTitle] = useState('');
 
   // Handler function for the email button click
   const handleEmailButtonClick = (e) => {
@@ -28,11 +29,13 @@ const Form1 = () => {
       try {
         window.location.href = mailtoLink;
       } catch (err) {
-        setError(err.message); // Store the error message in the state
+        setError(err.message);
       }
     } else {
       alert('No email account found. Cannot trigger email.');
     }
+    setMessage('');
+    setName('');
   };
 
   const handleSubmit = (e) => {
@@ -122,7 +125,7 @@ const Form1 = () => {
               <div className="form1-container">
                 <div className="inner-container">
                   <form id="contact" onSubmit={handleEmailButtonClick}>
-                    <h3>Get in touch</h3>
+                    <h3>N Get in touch</h3>
                     <h4>Feel free to drop us a message</h4>
                     <div className="fields-container">
                       <fieldset>
@@ -135,16 +138,15 @@ const Form1 = () => {
                           required
                         />
                       </fieldset>
-                      {/* <fieldset>
+                      <fieldset>
                         <input
-                          placeholder="Your Email Address"
-                          name="email"
-                          type="email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
+                          placeholder="Message title"
+                          type="text"
+                          value={name}
+                          onChange={(e) => setTitle(e.target.value)}
                           required
                         />
-                      </fieldset> */}
+                      </fieldset>
                       <fieldset>
                         <textarea
                           placeholder="Type your message here...."
