@@ -1,12 +1,13 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import MdTime from 'react-ionicons/lib/MdTime';
+import Fade from 'react-reveal/Fade';
 import { toast } from 'react-toastify';
+// import ReCAPTCHA from "react-google-recaptcha";
 import EnquiryService from '../httpService/EnquiryService';
-import './form1.css';
 import mail from '../../assets/mail.svg';
 import location from '../../assets/location.svg';
 import phone from '../../assets/phone.svg';
-import Fade from 'react-reveal/Fade';
+import './form1.css';
 
 const enquiryService = new EnquiryService();
 
@@ -125,7 +126,7 @@ const Form1 = () => {
               <div className="form1-container">
                 <div className="inner-container">
                   <form id="contact" onSubmit={handleEmailButtonClick}>
-                    <h3>N Get in touch</h3>
+                    <h3>Get in touch</h3>
                     <h4>Feel free to drop us a message</h4>
                     <div className="fields-container">
                       <fieldset>
@@ -155,6 +156,12 @@ const Form1 = () => {
                           onChange={(e) => setMessage(e.target.value)}
                           required
                         />
+                      </fieldset>
+                      <fieldset>
+                        {/* <ReCAPTCHA
+    sitekey="Your client site key"
+    onChange={onChange}
+  /> */}
                       </fieldset>
                       <fieldset className="shake-button">
                         <button name="submit" type="submit">
